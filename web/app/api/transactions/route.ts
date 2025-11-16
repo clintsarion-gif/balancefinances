@@ -1,9 +1,9 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import Prisma from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new Prisma.PrismaClient();
+const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
   try {
