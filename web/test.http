@@ -1,6 +1,53 @@
+### Create New Account
+POST http://localhost:3000/api/accounts
+Content-Type: application/json
+
+{
+  "userId": "6c439b1a-ac1c-45b6-9700-f8a6594fb391",
+  "name": "Checking Account",
+  "type": "checking"
+}
+
+
+
+### Create New User
 POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "email": "clint@test.com"
+  "email": "freshuser@test.com"
 }
+
+
+
+### Create Transaction
+POST http://localhost:3000/api/transactions
+Content-Type: application/json
+
+{
+  "accountId": "d80237e2-9994-4b79-b0f2-06d84d5ed4a9",
+  "date": "2025-11-14T00:00:00.000Z",
+  "amount": -42.99,
+  "merchant": "Amazon"
+}
+
+
+
+### Create an Account
+POST http://localhost:3000/api/accounts
+Content-Type: application/json
+
+{
+  "userId": "fd552ef9-d85e-4fdd-94f8-52446839fb97",
+  "name": "Checking Account",
+  "type": "checking"
+}
+
+
+### Get Accounts for a User
+GET http://localhost:3000/api/accounts?userId=6c439b1a-ac1c-45b6-9700-f8a6594fb391
+
+
+
+### Get Transactions for an Account
+GET http://localhost:3000/api/transactions?accountId=d80237e2-9994-4b79-b0f2-06d84d5ed4a9
